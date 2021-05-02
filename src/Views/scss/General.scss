@@ -2,9 +2,23 @@
 @import "Variables";
 @import "ResetStyles";
 @import "LoginStyles";
+@import "Loading";
 
 //PADDINGS
 $padding-container: 40px;
+
+//COLORS
+.color-primary{
+  color: $color-primary;
+}
+
+//SHOW/HIDE
+.opacity{
+  opacity: 0.5;
+}
+.d-none{
+  display: none;
+}
 
 //CONTAINER
 .container {
