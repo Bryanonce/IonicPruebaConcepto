@@ -1,0 +1,110 @@
+//Variables
+$altura-pico: 20px;
+$padding-input: 15px;
+$icon-space: 40px;
+
+//FORM-CONTAINER
+.form {
+  margin: 40px 0;
+}
+
+//HEADER
+.header {
+  background-color: $color-primary;
+  height: $header-size;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.4);
+  h2 {
+    text-transform: uppercase;
+    color: #fff;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    bottom: -$altura-pico;
+    left: $altura-pico;
+    border-left: 0.8 * $altura-pico solid transparent;
+    border-right: 0.8 * $altura-pico solid transparent;
+    border-top: $altura-pico solid $color-primary;
+  }
+}
+
+//INPUT
+.input-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s;
+  margin: 10px 0;
+  .input {
+    width: 100%;
+    padding: $padding-input;
+    border: none;
+    background-color: $color-inputs;
+    padding-left: $icon-space;
+    outline: none;
+    font-size: 0.9rem;
+    color: $color-shadow-text;
+  }
+  .icon {
+    position: absolute;
+    left: $icon-space/4;
+    color: $color-shadow-text;
+    transition: all 0.25s;
+  }
+  &:focus-within {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+    transform: translateX(-5px);
+    transform: translateY(-5px);
+    .input{
+        color: $color-primary;
+    }
+    .icon{
+        color: $color-primary;
+    }
+  }
+}
+
+//INPUTS-NO-EMPTY
+.input-no-empty {
+    color: $color-primary !important;
+}
+
+//BUTTON
+.btn {
+    background-color: $color-primary;
+    color: #fff;
+    padding: 15px 0;
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 50px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    transition: all 0.25s;
+    &:hover{
+        box-shadow: none;
+        transform: translateX(-5px);
+        transform: translateY(5px);
+        opacity: 0.5;
+    }
+}
+
+.sign-up-banner{
+    color: $color-shadow-text;
+    margin: 20px 0;
+    span{
+        color: $color-primary;
+        font-weight: bold;
+    }
+}

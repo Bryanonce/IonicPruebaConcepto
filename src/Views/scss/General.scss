@@ -1,0 +1,17 @@
+@import "Fonts";
+@import "Variables";
+@import "ResetStyles";
+@import "LoginStyles";
+
+//PADDINGS
+$padding-container: 40px;
+
+//CONTAINER
+.container {
+  padding: 0 $padding-container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 150px);
+}

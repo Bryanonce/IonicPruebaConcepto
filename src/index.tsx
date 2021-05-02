@@ -4,6 +4,9 @@ import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 
+//Import Styles
+import './Views/scss/General.scss'
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
